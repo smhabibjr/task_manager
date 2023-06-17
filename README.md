@@ -1,15 +1,13 @@
-### Request Response Loop
+### Redirect controller Actions
 
-![img.png](img.png)
+![img_1.png](img_1.png)
 
-Rendering different template from different action.
+Rails Redirect
 
 ````
-  def index
-    render('main/about') //rendering about page from index action
-  end
+redirect_to(controller: 'main', action: 'index')
 
-  def about
-    render("main/index") // rendering index page from about action
-  end
+redirect_to(action: 'index')
+
+redirect_to('https://google.com')
 ````
