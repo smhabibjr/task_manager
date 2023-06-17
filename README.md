@@ -1,16 +1,15 @@
-### ERb = Embedded Ruby
+### Use instance variables to set values in the template.
 
-Templating system to embed ruby
+A regular variable has scope only inside a particular action. 
 
-Template File Naming
+An instance variable has scope throughout the controller class and is available to all methods inside that class. 
 
-For example : index.html.erb
+Rails also makes those instance variables available to the template. In other words, a template can automatically access any instance variables you've set. This makes it easy to pass data to your views. 
 
-1. Template name : index
-2. Process with : ERB
-3. Output format: html
+Let's demonstrate: 
 
-Embedding Ruby
+
+
 ````
 <% code %> // Here Ruby code will be process but its not output in the template.
 
