@@ -1,24 +1,17 @@
-# README
+### Rails Routes Types
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Match route
+ 
+get "main/index" (This is a shorter form)
+get "main/index", to: "main#index", via: :get
 
-Things you may want to cover:
+#### Root route
 
-* Ruby version
+Root route is a short hand form to set up homepage for your application.
 
-* System dependencies
+root "main#index"
+or 
 
-* Configuration
+get "/", to: "main#index"
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Resourceful routes
