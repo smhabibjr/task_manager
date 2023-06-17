@@ -1,2 +1,16 @@
 <h1>Task Manager</h1>
 <p>This is an application for managing a to do list</p>
+
+
+<% x = 1 + 5 %>
+
+<%= x %>
+
+<% tasks = ['Go to shoping', 'Go to gym', 'Go to school'] %>
+<ul>
+  <% tasks.each do |task| %>
+    <li>
+      <%= task %>
+    </li>
+  <% end %>
+</ul>

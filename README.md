@@ -1,13 +1,24 @@
-### Redirect controller Actions
+### ERb = Embedded Ruby
 
-![img_1.png](img_1.png)
+Templating system to embed ruby
 
-Rails Redirect
+Template File Naming
 
+For example : index.html.erb
+
+1. Template name : index
+2. Process with : ERB
+3. Output format: html
+
+Embedding Ruby
 ````
-redirect_to(controller: 'main', action: 'index')
+<% code %> // Here Ruby code will be process but its not output in the template.
 
-redirect_to(action: 'index')
+<%= code %> // But here Ruby code will be process and output
 
-redirect_to('https://google.com')
+for example : 
+
+<% x = 1 + 5 %>
+
+<%= x %>
 ````
