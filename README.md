@@ -1,17 +1,15 @@
-### Rails Routes Types
+### Request Response Loop
 
-#### Match route
- 
-get "main/index" (This is a shorter form)
-get "main/index", to: "main#index", via: :get
+![img.png](img.png)
 
-#### Root route
+Rendering different template from different action.
 
-Root route is a short hand form to set up homepage for your application.
+````
+  def index
+    render('main/about') //rendering about page from index action
+  end
 
-root "main#index"
-or 
-
-get "/", to: "main#index"
-
-#### Resourceful routes
+  def about
+    render("main/index") // rendering index page from about action
+  end
+````
