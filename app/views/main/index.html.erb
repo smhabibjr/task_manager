@@ -1,16 +1,6 @@
 <h1>Task Manager</h1>
 <p>This is an application for managing a to do list</p>
 
-
-<% x = 1 + 5 %>
-
-<%= x %>
-
-
-<ul>
-  <% @tasks.each do |task| %>
-    <li>
-      <%= task %>
-    </li>
-  <% end %>
-</ul>
+<a href="/tasks/index">go to task</a>
+<br>
+<%= link_to("go to task", {controller: :tasks, action: :index}) %>
