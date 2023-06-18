@@ -1,20 +1,15 @@
-### Create links to other web pages.
+### Defining and Reading URL Paramenters
+
+![img_2.png](img_2.png)
+
+![img_3.png](img_3.png)
+
+![img_4.png](img_4.png)
 
 ````
-HTML links 
+pass parameter using link
 
- <a href="/main/index"> Click me </a>
- 
- Rails Links 
- 
- <%= link_to(text, target) %>
+<%= link_to("About page", { action: :about, page: 5, id: 26}) %>
 
 ````
-
-Link targets can be a url like below: 
-
-"main/index"
-
-or it can be a hash with controller name and action name.
-
-{controller: 'main', action: 'index'}
+![img_5.png](img_5.png)

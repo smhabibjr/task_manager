@@ -6,7 +6,8 @@ class MainController < ApplicationController
   end
 
   def about
-
+    @id = params['id']
+    @page = params[:page]
   end
 
   def hello
