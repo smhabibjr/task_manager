@@ -1,2 +1,28 @@
-<h1>Tasks#new</h1>
-<p>Find me in app/views/tasks/new.html.erb</p>
+<h1>Add new Task</h1>
+
+<%= form_with model: @task do |f| %>
+
+  <table>
+    <tr>
+      <th style="text-align: left"><%= f.label :name %></th>
+      <td><%= f.text_field :name %></td>
+    </tr>
+    <tr>
+      <th style="text-align: left"><%= f.label :description %></th>
+      <td><%= f.text_area :description %></td>
+    </tr>
+    <tr>
+      <th style="text-align: left"><%= f.label :position %></th>
+      <td><%= f.number_field :position %></td>
+    </tr>
+    <tr>
+      <th style="text-align: left"><%= f.label :completed %></th>
+      <td> <%= f.check_box :completed %></td>
+    </tr>
+  </table>
+
+  <div>
+    <%= f.submit %>
+  </div>
+
+<% end %>

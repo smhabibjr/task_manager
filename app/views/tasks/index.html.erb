@@ -1,4 +1,23 @@
-<h1>Tasks#index</h1>
-<p>Find me in app/views/tasks/index.html.erb</p>
+<h1>All Tasks</h1>
 
-<%= link_to("Back to home", {controller: :main, action: :index}) %>
+<table class="listing" summary="Task list" style="width: 100%;">
+  <tr class="header">
+    <th style="text-align: left">ID</th>
+    <th style="text-align: left">Task</th>
+    <th style="text-align: left">Actions</th>
+  </tr>
+<% @tasks.each do |task| %>
+  <tr>
+    <td><%= task.id %></td>
+    <td><a href="tasks/<%= task.id %>"><%= task.name %> </a> </td>
+
+    <td class="actions">
+      <%= link_to("Show", '#', class: 'action show') %>
+      <%= link_to("Edit", '#', class: 'action edit') %>
+      <%= link_to("Delete", '#', class: 'action delete') %>
+    </td>
+  </tr>
+
+    <% end %>
+
+</table>

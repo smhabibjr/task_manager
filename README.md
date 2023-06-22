@@ -1,26 +1,23 @@
-### One to many associations between models
+### REST HTTP Verbs
 
-![img_30.png](img_30.png)
+![img_31.png](img_31.png)
+You can also omit the routes if you dont need that
 
-At least we need two model to create a associaltion.
+![img_33.png](img_33.png)
 
-we have already Task model. now lets create another model ta
+if you need more verbs 
+
+![img_32.png](img_32.png)
+
 ````
 rails g model Category name:string
 
 ````
 
-create another migration to create fogrin key attribute.
+### Resouceful URL Helpers
 
-````
-rails g migration AddCategoryIdTasks
+![img_34.png](img_34.png)
 
-Edit the migration 
+Complete Resourcful url helpers 
 
-class AddCategoryIdTasks < ActiveRecord::Migration[7.0]
-  def change
-    
-    add_column(:tasks, :category, :integer, index: true )
-  end
-end
-````
+![img_35.png](img_35.png)

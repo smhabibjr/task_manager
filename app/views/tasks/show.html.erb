@@ -1,0 +1,20 @@
+<h1>Single Task Page</h1>
+
+<table>
+  <tr>
+    <th style="text-align: left">Name</th>
+    <td> <%= @task.name %> </td>
+  </tr>
+  <tr>
+    <th style="text-align: left">Description</th>
+    <td> <%= @task.description %> </td>
+  </tr>
+  <tr>
+    <th style="text-align: left">Position</th>
+    <td> <%= @task.position %> </td>
+  </tr>
+  <tr>
+    <th style="text-align: left">Completed</th>
+    <td> <%= @task.completed? ? 'Yes': 'No' %> </td>
+  </tr>
+</table>
